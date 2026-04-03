@@ -1,0 +1,6 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+N = input()
+user_input = input()
+user_input = [i.upper() if i.islower() else i.lower() for i in user_input]
+print("".join(user_input))
