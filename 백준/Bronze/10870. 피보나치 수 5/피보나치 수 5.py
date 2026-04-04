@@ -1,10 +1,7 @@
-def fibo(x):
-    if x==0:
-        return 0
-    elif x==1:
-        return 1    
-    
-    return fibo(x-1) + fibo(x-2)
-
 n = int(input())
-print(fibo(n))
+fibo = [0,1]
+
+for i in range(2, n+1):
+    fibo.append(fibo[i-2] + fibo[i-1])
+
+print(fibo[n])
