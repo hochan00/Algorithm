@@ -1,19 +1,12 @@
 i = int(input())
-num = 0
+n = 0
 
 for _ in range(i):
-    word = list(input())
-    exist = []
-    pre = ''
+    word = input()
     for j in range(len(word)):
-        if word[j] != pre and word[j] not in exist:
-            pre = word[j]
-            exist.append(pre)
-        elif word[j] == pre:
-            continue
-        else:
-            num -= 1
+        if word[j] != word[j-1] and word[j] in word[:j]:
             break
-    num += 1
-    
-print(num)
+        if j == len(word)-1:
+            n += 1
+
+print(n)
